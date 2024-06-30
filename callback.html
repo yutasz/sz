@@ -9,8 +9,13 @@
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
-        // ここで認証コードを処理するか、他のページにリダイレクトします
-        alert("Authorization code: " + code);
+        if (code) {
+            alert("Authorization code: " + code);
+            // ここで次の処理を追加。例えば、サーバーに認証コードを送信する。
+            // window.location.href = `https://your-server.com/handle-auth-code?code=${code}`;
+        } else {
+            alert("No authorization code found.");
+        }
     </script>
     <h1>OAuth Callback</h1>
     <p>Authorization code received.</p>
