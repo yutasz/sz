@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAuth Callback</title>
+</head>
+<body>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        // ここで認証コードを処理するか、他のページにリダイレクトします
+        alert("Authorization code: " + code);
+    </script>
+    <h1>OAuth Callback</h1>
+    <p>Authorization code received.</p>
+</body>
+</html>
